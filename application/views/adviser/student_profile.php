@@ -1,22 +1,39 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Adviser-Student Records Management System</title>
+<div class="pure-menu adminnav" id="cssmenu">
+	<ul class="pure-menu-list custom-restricted-width">
 
-	</head>
+		<li class="pure-menu-item">
+			<a href="<?php echo site_url('adviser/') ?>" class="pure-menu-link navLink" id="logs">Profile</a>
+		</li>
 
-	<body>
-			<div class="top-panel">
-				<h1>Adviser-Student Records Management System</h1>
-				<button type="button">Log out</button>
-			</div>
+		<li class="pure-menu-item">
+			<a href="<?php echo site_url('adviser/edit') ?>" class="pure-menu-link navLink" id="update">Update Specialization</a>
+		</li>
 
-			<br><br><br>
+		<li class="pure-menu-item">
+			<a href="<?php echo site_url('adviser/change_password') ?>" class="pure-menu-link navLink" id="logs">Change Password</a>
+		</li>
 
-			<div class="body-panel">
+		<li class="pure-menu-item">
+			<a href="<?php echo site_url('adviser/grad_advisees') ?>" class="pure-menu-link navLink" id="logs">View Graduate Advisees</a>
+		</li>
 
-				<table border="true">
-					 <tr>
+		<li class="pure-menu-item pure-menu-selected">
+			<a href="<?php echo site_url('adviser/advisees') ?>" class="pure-menu-link navLink" id="logs">View Advisees</a>
+		</li>
+	</ul>
+</div>
+
+<div class="table-responsive logs container studentprofile">
+	<div class="body-panel">
+	<center>
+		<a href="<?php echo site_url('adviser/view_advisee/'.$student['student_number'].'') ?>" class="pure-button">Student Profile</a>
+		<a href="<?php echo site_url('adviser/grades/'.$student['student_number'].'') ?>" class="pure-button">Student Grades</a>
+		<a href="<?php echo site_url('adviser/advisees') ?>" class="pure-button">Back to list</a>
+	</center>
+	<br><br>
+		<center>
+			<table border="true" class="mq-table pure-table-bordered pure-table">
+				<tr>
 						<td>Name: </td>
 						<td><?php echo $student['last_name'].','. $student['first_name'].' '.$student['middle_name']?></td>
 					</tr>
@@ -52,7 +69,7 @@
 						<td>Member since: </td>
 						<td>2010</td>
 					</tr>
-				</table>
-			</div>
-	</body>
-</html>
+			</table>
+		</center>
+	</div>
+</div>

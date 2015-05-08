@@ -1,21 +1,28 @@
-<div class="pure-menu adminnav">
+<div class="pure-menu adminnav" id="cssmenu">
 	<ul class="pure-menu-list custom-restricted-width">
 
-		<li class="pure-menu-item pure-menu-selected">
-			<a href="<?php echo site_url('student/') ?>" class="pure-menu-link navLink" id="logs">Profile</a>
-		</li>
+        <li class="pure-menu-item pure-menu-selected">
+            <a href="<?php echo site_url('student/') ?>" class="pure-menu-link navLink" id="logs">Profile</a>
+        </li>
+      
+        <li class="pure-menu-item pure-menu">
+            <a href="<?php echo site_url('student/grades') ?>" class="pure-menu-link navLink" id="add">View Grades</a>
+        </li>
+        
+        <li class="pure-menu-item">
+            <a href="<?php echo site_url('student/update') ?>" class="pure-menu-link navLink" id="update">Update Profile</a>
+        </li>
 
-		<li class="pure-menu-item pure-menu">
-			<a href="<?php echo site_url('student/grades') ?>" class="pure-menu-link navLink" id="add">View Grades</a>
-		</li>
+        <li class="pure-menu-item">
+            <a href="<?php echo site_url('student/change') ?>" class="pure-menu-link navLink" id="update">Change Password</a>
+        </li>
 
-		<li class="pure-menu-item">
-			<a href="<?php echo site_url('student/update') ?>" class="pure-menu-link navLink" id="update">Update Profile</a>
-		</li>
-
-		<li class="pure-menu-item">
-			<a href="<?php echo site_url('student/search') ?>" class="pure-menu-link navLink" id="update">Search Adviser</a>
-		</li>
+        <li class="pure-menu-item">
+            <a href="<?php echo site_url('student/adviser') ?>" class="pure-menu-link navLink" id="update">Search Adviser</a>
+        </li>
+         <li class="pure-menu-item">
+            <a href="<?php echo site_url('student/student_adviser') ?>" class="pure-menu-link navLink" id="update">View Adviser</a>
+        </li>
 
 	</ul>
 </div>
@@ -27,7 +34,7 @@
 			<table border="true" class="mq-table pure-table-bordered pure-table">
 				<tr>
 					<td>Name: </td>
-					<td><?php echo $stud->last_name.','. $stud->first_name.' '.$stud->middle_name?></td>
+					<td><?php echo $stud->last_name.', '. $stud->first_name.' '.$stud->middle_name?></td>
 				</tr>
 				<tr>
 					<td>Student Number: </td>
@@ -56,10 +63,6 @@
 				<tr>
 					<td>Home Address: </td>
 					<td><?php echo $stud->home_address ?></td>
-				</tr>
-				<tr>
-					<td>Member since: </td>
-					<td>2010</td>
 				</tr>
 			</table>
 		<?php endforeach; ?>
